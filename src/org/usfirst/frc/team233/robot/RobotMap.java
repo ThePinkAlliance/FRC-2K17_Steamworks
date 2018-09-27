@@ -58,17 +58,6 @@ public class RobotMap {
 	// Motor Speed
 	public static double collectorMotorSpeed = 0.75;
 	
-
-	//============================================
-	// 		ROPE CLIMBER VARIABLES
-	//============================================
-	// Motors
-	public static int ropeClimberMotorPort = 7;
-	public static int ropeClimber2MotorPort = 9;
-	
-	// Motor Speeds
-	public static double ropeClimberSpeed = 1.0;
-	
 	
 	//============================================
 	// 		HOPPER VARIABLES
@@ -81,17 +70,9 @@ public class RobotMap {
 	
 	
 	//============================================
-	// 		GEAR SLOT VARIABLES
-	//============================================
-	public static int gearSlotSolenoidPort = 7;
-	public static int ejectorSolenoidPort = 6;
-	
-	
-	//============================================
 	// 		JOYSTICK VARIABLES
 	//============================================
 	public static int baseJoystickPort = 0;
-	public static int shooterJoystickPort = 1;
 	
 	// Define all raw button numbers
 	public static int xButtonNumber = 1;

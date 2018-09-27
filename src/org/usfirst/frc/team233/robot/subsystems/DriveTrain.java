@@ -4,9 +4,7 @@ import org.usfirst.frc.team233.robot.Robot;
 import org.usfirst.frc.team233.robot.RobotMap;
 import org.usfirst.frc.team233.robot.commands.TankDrive;
 import org.usfirst.frc.team233.robot.subsystems.Lights.LightingType;
-
 import com.kauailabs.navx.frc.AHRS;
-
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.CounterBase.EncodingType;
 import edu.wpi.first.wpilibj.Encoder;
@@ -20,7 +18,6 @@ import edu.wpi.first.wpilibj.Joystick.AxisType;
 import edu.wpi.first.wpilibj.PIDSourceType;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-//import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 
 
 public class DriveTrain extends Subsystem {
@@ -31,8 +28,7 @@ public class DriveTrain extends Subsystem {
 	public SpeedController rearRightMotor = new Talon(RobotMap.rightBackMotorPort);
 	
 	// Link the motors to the robot
-	private RobotDrive drive = new RobotDrive(frontLeftMotor, rearLeftMotor,
-			frontRightMotor, rearRightMotor);
+	private RobotDrive drive = new RobotDrive(frontLeftMotor, rearLeftMotor, frontRightMotor, rearRightMotor);
 	// Define the direction for each motor
 	boolean isInverted = true;
 
@@ -58,19 +54,12 @@ public class DriveTrain extends Subsystem {
 	
 
 	// Define all the encoders that are going to be used for the drive train.
-	public Encoder leftEncoder = new Encoder(RobotMap.leftEncoderAPort, 
-											 RobotMap.leftEncoderBPort, 
-											 false,
-											 EncodingType.k1X);
-	public Encoder rightEncoder = new Encoder(RobotMap.rightEncoderAPort, 
-											  RobotMap.rightEncoderBPort, 
-											  false,
-											  EncodingType.k1X);
+	public Encoder leftEncoder = new Encoder(RobotMap.leftEncoderAPort, RobotMap.leftEncoderBPort, false, EncodingType.k1X);
+	public Encoder rightEncoder = new Encoder(RobotMap.rightEncoderAPort, RobotMap.rightEncoderBPort, false, EncodingType.k1X);
 
 	/** Drive train constructor. */
 	public DriveTrain() {
 		super();
-		// System.out.println("Drivetrain Constructor");
 		drive.setSafetyEnabled(true);
 		setupMotors();
 		setupEncoders();
